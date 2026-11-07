@@ -1,0 +1,6 @@
+finding,rate_a,rate_b,difference,ci_low,ci_high,p_value,action
+No special requests,0.4776923076923077,0.21761309147299476,0.26007921621931296,0.2548831189705642,0.2652753134680617,0.0,Send reminders to high-risk bookings; test the intervention before requiring deposits.
+Non-refundable bookings,0.9936244601357374,0.28402259237985833,0.7096018677558791,0.7065774933962407,0.7126262421155175,0.0,Audit channel and contract rules before changing the deposit policy.
+Summer ADR,120.0,74.8,45.2,,,0.0,Use seasonal pricing controls and validate by hotel.
+City Hotel cancellation,0.4178593534858457,0.2776806672326824,0.14017868625316326,0.13460683553780947,0.14575053696851706,0.0,Set hotel-specific monitoring thresholds.
+Lead time above 180 days,0.5701377633711507,0.09600203717850776,0.474135726192643,0.46671089994358245,0.48156055244170354,0.0,Prioritize early-booked reservations for confirmation reminders.

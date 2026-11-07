@@ -1,0 +1,12 @@
+problem,rows,decision,reason
+Exact duplicate rows retained and flagged,40165,Keep and flag,"No booking ID exists, so identical rows cannot be proven to be duplicate events."
+Bookings with no guests removed,180,Remove,A booking requires at least one guest.
+Zero-night bookings retained and flagged,715,Keep and flag,Some may be day-use records or data errors; the source does not distinguish them.
+Negative ADR rows removed,1,Remove,A negative quoted room price is not valid for this analysis.
+ADR above EUR 1000 retained and flagged,1,Keep and flag,The record may be valid but is influential for averages and models.
+Adults above 10 retained and flagged,12,Keep and flag,The row may be a group booking.
+Missing children filled with zero,4,Fill with zero,Four missing values have no other invalid guest information.
+Missing country filled with UNK and flagged,488,Fill category and flag,The booking remains usable while missingness stays visible.
+Missing agent retained and flagged,16340,Keep missing and flag,Missing does not reliably prove a direct booking.
+Missing company retained and flagged,112593,Keep missing and flag,Missing does not reliably prove a non-corporate booking.
+Target/status mismatches after correct No-Show mapping,0,No overwrite,The original target already treats Canceled and No-Show as cancellation outcomes.

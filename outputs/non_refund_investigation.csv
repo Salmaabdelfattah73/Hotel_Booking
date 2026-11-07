@@ -1,0 +1,6 @@
+market_segment,bookings,cancellation_rate,median_lead_time,median_adr
+Groups,9172,0.9932402965547318,213.0,75.0
+Offline TA/TO,5006,0.9994007191370355,177.0,95.0
+Corporate,334,0.9341317365269461,38.0,90.0
+Online TA,56,0.9464285714285714,7.0,85.5
+Direct,19,0.8421052631578947,163.0,100.0

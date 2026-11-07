@@ -1,0 +1,5 @@
+cluster,bookings,lead_time,nights,guests,weekend_share,repeated_rate,prior_cancellations,parking_rate,cancellation_rate,median_adr,share,cluster_name,action
+0,102917,72.0,3.0,2.0,0.25608524664750393,2.9149703158856165e-05,0.0,0.0,0.3708230904515289,96.0,0.8633324665084012,Long-stay guests,Offer stay extensions and review revenue exposure before discounting.
+1,3798,3.0,1.0,1.0,0.20408471866340558,0.909952606635071,0.4426013691416535,0.16798314902580305,0.0866245392311743,65.0,0.031860010569671755,Loyal repeat guests,Protect loyalty benefits and avoid unnecessary deposit requests.
+2,6771,24.0,3.0,2.0,0.2594977885783303,0.006941367597105302,0.000738443361394181,1.0,0.0,104.06,0.05679940272965967,Short-lead standard stays,Use quick confirmation and availability-based pricing.
+3,5723,259.0,2.0,2.0,0.22920149287876004,0.043333915778437884,1.5215795911235366,0.0,0.9970295299668006,68.0,0.04800812019226736,Early planners,Schedule confirmation reminders well before arrival.

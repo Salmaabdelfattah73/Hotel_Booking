@@ -1,0 +1,8 @@
+hotel,cluster_name,rows,mae,bias
+City Hotel,Long-stay guests,26419,22.41442816243113,-17.667566224678716
+City Hotel,Loyal repeat guests,591,14.757841163134202,-3.8643384980454134
+City Hotel,Short-lead standard stays,436,30.51576198645786,-23.939490716233475
+Resort Hotel,Early planners,9,27.967708388140295,-21.183111832308512
+Resort Hotel,Long-stay guests,10821,22.259829923672747,-16.242883789539988
+Resort Hotel,Loyal repeat guests,865,15.604895090723435,-8.12763480856435
+Resort Hotel,Short-lead standard stays,1478,29.779105964143472,-25.209848309881913

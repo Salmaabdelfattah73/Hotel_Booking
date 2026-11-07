@@ -1,0 +1,152 @@
+{
+  "cancellation": {
+    "1 Prediction": "Cancellation risk for each booking when it is created.",
+    "2 Metric and why": "PR-AUC for ranking, with precision and recall at the operating threshold.",
+    "3 Cut-off": "Probability at or above 0.609, selected from the validation top quartile.",
+    "4 Action": "Send a confirmation reminder; staff review deposit eligibility before any request.",
+    "5 Value": "Contact 10,300 test bookings (25.4%); 79.8% are cancellations and they capture 52.3% of all cancellations. Random selection at the same volume captures about 25.4%; lift is 2.06x.",
+    "6 Model": "Logistic regression using booking-time features and training arrivals through 2016.",
+    "7 Score": "Test PR-AUC 0.790.",
+    "8 Weak spots": "Monitor recall by hotel, country and guest segment; do not use nationality to set the action.",
+    "9 Re-check when": "Review monthly. Retrain if PR-AUC falls 10% below the validation benchmark for two months.",
+    "10 Human check": "Staff confirm loyalty, company contract and local deposit rules.",
+    "11 Finding": "Long lead time and deposit type carry more risk information than nationality alone."
+  },
+  "adr": {
+    "1 Prediction": "Expected ADR for each booking when it is created.",
+    "2 Metric and why": "MAE in euros because the error is directly understandable to revenue management.",
+    "3 Cut-off": "Quoted ADR more than EUR 20 below the model expectation.",
+    "4 Action": "Route the quote to revenue management before confirmation.",
+    "5 Value": "Flag 1,465 test bookings. Their average model-to-quote gap is EUR 40.16; the gross review opportunity is EUR 58,839, not guaranteed revenue.",
+    "6 Model": "Random forest using booking-time features and training arrivals through 2016.",
+    "7 Score": "Test MAE EUR 22.47 versus EUR 40.09 for the mean baseline, an improvement of 43.9%.",
+    "8 Weak spots": "Monitor MAE and bias by hotel and segment, especially high-price bookings.",
+    "9 Re-check when": "Review monthly. Retrain if MAE rises 20% above the validation benchmark.",
+    "10 Human check": "Confirm package inclusions, room constraints, promotions and contract rates.",
+    "11 Finding": "Season, hotel and requested stay pattern explain a material share of ADR variation."
+  },
+  "cancellation_monthly": [
+    {
+      "month": "2017-01",
+      "rows": 3673,
+      "pr_auc": 0.8220499911629933,
+      "precision_at_threshold": 0.8903133903133903,
+      "recall_at_threshold": 0.500400320256205
+    },
+    {
+      "month": "2017-02",
+      "rows": 4168,
+      "pr_auc": 0.751662914092715,
+      "precision_at_threshold": 0.8660436137071651,
+      "recall_at_threshold": 0.40942562592047127
+    },
+    {
+      "month": "2017-03",
+      "rows": 4948,
+      "pr_auc": 0.7960864707092935,
+      "precision_at_threshold": 0.8276810265811182,
+      "recall_at_threshold": 0.5403949730700179
+    },
+    {
+      "month": "2017-04",
+      "rows": 5653,
+      "pr_auc": 0.8470137063682811,
+      "precision_at_threshold": 0.84312606959498,
+      "recall_at_threshold": 0.6013018714401953
+    },
+    {
+      "month": "2017-05",
+      "rows": 6305,
+      "pr_auc": 0.8306440949420102,
+      "precision_at_threshold": 0.8379800105207785,
+      "recall_at_threshold": 0.5767559739319333
+    },
+    {
+      "month": "2017-06",
+      "rows": 5639,
+      "pr_auc": 0.8086140195460366,
+      "precision_at_threshold": 0.7675070028011205,
+      "recall_at_threshold": 0.5619360131255127
+    },
+    {
+      "month": "2017-07",
+      "rows": 5310,
+      "pr_auc": 0.6854140597653723,
+      "precision_at_threshold": 0.684942084942085,
+      "recall_at_threshold": 0.4470766129032258
+    },
+    {
+      "month": "2017-08",
+      "rows": 4923,
+      "pr_auc": 0.6963859388705278,
+      "precision_at_threshold": 0.7161803713527851,
+      "recall_at_threshold": 0.44652701212789414
+    }
+  ],
+  "adr_monthly": [
+    {
+      "month": "2017-01",
+      "rows": 3673,
+      "mae": 11.619023918134294,
+      "bias": -5.539965090086376
+    },
+    {
+      "month": "2017-02",
+      "rows": 4168,
+      "mae": 11.762316112271257,
+      "bias": -5.796078144646003
+    },
+    {
+      "month": "2017-03",
+      "rows": 4948,
+      "mae": 14.81771194728473,
+      "bias": -7.68793722137925
+    },
+    {
+      "month": "2017-04",
+      "rows": 5653,
+      "mae": 25.58928395401188,
+      "bias": -22.735217407790596
+    },
+    {
+      "month": "2017-05",
+      "rows": 6305,
+      "mae": 24.929501088916155,
+      "bias": -20.200070381414847
+    },
+    {
+      "month": "2017-06",
+      "rows": 5639,
+      "mae": 23.030049207262955,
+      "bias": -18.511723056266575
+    },
+    {
+      "month": "2017-07",
+      "rows": 5310,
+      "mae": 28.009826687420876,
+      "bias": -22.075793431642914
+    },
+    {
+      "month": "2017-08",
+      "rows": 4923,
+      "mae": 33.99862176615619,
+      "bias": -28.37423754771439
+    }
+  ],
+  "metrics": {
+    "cancellation_threshold": 0.609110353214239,
+    "contacted": 10300,
+    "capacity_share": 0.2535759127501908,
+    "precision": 0.798252427184466,
+    "recall": 0.5225626032795221,
+    "random_recall": 0.2535759127501908,
+    "lift": 2.060773823554457,
+    "adr_cutoff": 20.0,
+    "adr_flagged": 1465,
+    "adr_avg_gap": 40.1631680922063,
+    "adr_total_gap": 58839.04125508222,
+    "adr_mae": 22.472995785834502,
+    "adr_baseline_mae": 40.09069309276733,
+    "adr_mae_improvement": 0.43944606460573254
+  }
+}

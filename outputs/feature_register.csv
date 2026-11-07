@@ -1,0 +1,15 @@
+feature,definition,known_in_advance,model_use
+total_nights,Requested stay length,Yes,Both
+total_guests,Adults plus children plus babies,Yes,Both
+has_children,Booking includes a child or baby,Yes,Both
+family_booking,Adult booking with a child or baby,Yes,Both
+weekend_share,Weekend nights divided by total nights,Yes,Both
+arrival_weekday,Planned arrival weekday,Yes,Both
+arrival_month,Planned arrival month,Yes,Both
+is_weekend_arrival,Arrival is Saturday or Sunday,Yes,Both
+price_per_guest,Quoted ADR divided by total guests,Yes,Cancellation only
+lead_time_band,Booking horizon band,Yes,Both
+previous_cancel_rate,Historical cancellations divided by prior bookings,Yes,Both
+is_direct_channel,Direct distribution channel flag,Yes,Both
+has_parking_request,Parking requested at booking,Yes,Both
+cluster_name,Training-only guest segment from Task 3,Yes,Both

@@ -1,0 +1,8 @@
+{
+  "random_state": 42,
+  "train_end": "2016-12-31",
+  "test_start": "2017-01-01",
+  "selected_cancellation_model": "Logistic regression",
+  "cancellation_threshold": 0.609110353214239,
+  "selected_adr_model": "Random forest"
+}

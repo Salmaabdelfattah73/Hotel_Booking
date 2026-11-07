@@ -1,0 +1,10 @@
+column,reason
+reservation_status,"Directly reveals cancellation, No-Show or Check-Out"
+reservation_status_date,Set after the outcome
+assigned_room_type,May change after booking
+booking_changes,Accumulates after booking
+days_in_waiting_list,Known after booking processing
+is_canceled,Classification target
+adr,ADR regression target
+price_per_guest,Contains ADR target
+room_revenue_est,Contains ADR and completed nights
